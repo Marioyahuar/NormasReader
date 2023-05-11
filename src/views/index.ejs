@@ -1,0 +1,39 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NormasReader</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script src="/main.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>NormasReader</h1>
+      <div class="form-container">
+        <form id="upload-form" enctype="multipart/form-data">
+          <input class="file-input" type="file" name="pdfFile" />
+          <input class="button" type="submit" value="Subir" />
+        </form>
+        <div class="confirmation-container"></div>
+        <div>
+          <label for="pages-input">Número de página a procesar:</label>
+          <input
+            type="number"
+            name="pages"
+            id="pages-input"
+            min="1"
+            max="10"
+            value="2"
+          />
+          <button id="process-button" class="button">Procesar</button>
+        </div>
+      </div>
+      Normas que cumplen con los criterios
+      <div class="response-container">
+        <p>Respuesta:</p>
+        <div id="response"></div>
+      </div>
+    </div>
+  </body>
+</html>
